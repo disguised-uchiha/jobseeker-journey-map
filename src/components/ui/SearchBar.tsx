@@ -12,6 +12,7 @@ interface SearchBarProps {
   onSearch?: (value: string) => void;
   redirectToJobs?: boolean;
   variant?: "primary" | "white";
+  value?: string;
 }
 
 export const SearchBar = ({
@@ -21,8 +22,9 @@ export const SearchBar = ({
   onSearch,
   redirectToJobs = true,
   variant = "white",
+  value = "",
 }: SearchBarProps) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(value);
   const navigate = useNavigate();
   const { setFilters } = useJob();
 

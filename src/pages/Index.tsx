@@ -1,9 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { Button } from "@/components/ui/button";
 import { JobCard } from "@/components/ui/JobCard";
 import { useJob } from "@/context/JobContext";
+import { SuccessMessage } from "@/components/ui/SuccessMessage";
 
 const Index = () => {
   const { jobs } = useJob();
