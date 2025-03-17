@@ -58,7 +58,7 @@ export const SearchBar = ({
             showButton ? "rounded-l-md" : "rounded-md"
           } border ${
             variant === "white" ? "bg-white" : "bg-gray-50"
-          } focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 pr-10`}
+          } focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 pr-10 h-full`}
         />
         {!showButton && (
           <div 
@@ -73,7 +73,7 @@ export const SearchBar = ({
         <Button
           type="button"
           onClick={handleSearch}
-          className={`px-6 rounded-l-none ${
+          className={`px-6 rounded-l-none h-auto ${
             variant === "white" ? "bg-primary" : "bg-primary"
           } text-white hover:bg-primary-700 transition-all duration-200`}
         >

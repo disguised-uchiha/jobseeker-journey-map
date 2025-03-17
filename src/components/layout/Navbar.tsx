@@ -75,7 +75,7 @@ const Navbar = () => {
               isActive("/jobs") ? "text-primary" : "text-gray-700"
             }`}
           >
-            /Jobs
+            Jobs
           </Link>
           <Link
             to="/contact-us"
@@ -145,7 +145,7 @@ const Navbar = () => {
                   isActive("/jobs") ? "text-primary" : "text-gray-700"
                 }`}
               >
-                /Jobs
+                Jobs
               </Link>
               <Link
                 to="/contact-us"

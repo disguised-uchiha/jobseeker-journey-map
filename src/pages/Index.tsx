@@ -1,13 +1,24 @@
+
 import { Link } from "react-router-dom";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { Button } from "@/components/ui/button";
 import { JobCard } from "@/components/ui/JobCard";
 import { useJob } from "@/context/JobContext";
 import { SuccessMessage } from "@/components/ui/SuccessMessage";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { ChevronRight } from "lucide-react";
 
 const Index = () => {
   const { jobs } = useJob();
   const featuredJobs = jobs.slice(0, 4);
+  const [email, setEmail] = useState("");
+  
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add email subscription logic here
+    setEmail("");
+  };
   
   return (
     <div className="pt-24">
@@ -187,7 +198,25 @@ const Index = () => {
               </Button>
             </div>
             <div className="text-right">
-              <SuccessMessage title="Get in touch with our team" message="We're ready to help you find the perfect talent." />
+              <form onSubmit={handleSubscribe} className="flex flex-col space-y-4 md:items-end">
+                <h3 className="text-xl font-medium mb-2 md:text-right">Subscribe to our newsletter</h3>
+                <div className="flex w-full max-w-md">
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="rounded-r-none text-gray-800"
+                  />
+                  <Button 
+                    type="submit"
+                    className="rounded-l-none px-4 bg-primary hover:bg-primary-600"
+                  >
+                    <ChevronRight className="h-5 w-5" />
+                  </Button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
