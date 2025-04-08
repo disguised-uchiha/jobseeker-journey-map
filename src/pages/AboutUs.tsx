@@ -16,7 +16,7 @@ const AboutUs = () => {
         {/* Our Story Section */}
         <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="">
             <div>
               <p className="text-gray-600 mb-4">
                 Founded in 2018, HR Stream began with a simple goal: to transform the recruitment process for both companies and candidates. We recognized the inefficiencies and frustrations in traditional hiring methods and set out to create a more streamlined, transparent, and effective approach.
@@ -25,9 +25,9 @@ const AboutUs = () => {
                 What started as a small team of recruitment specialists has grown into a comprehensive platform that leverages technology and human expertise to deliver exceptional recruitment solutions. Today, we're proud to have helped hundreds of businesses find the talent they need and thousands of professionals advance their careers.
               </p>
             </div>
-            <div className="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
+            {/* <div className="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
               <p className="text-gray-400 italic">Company image placeholder</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -56,7 +56,7 @@ const AboutUs = () => {
         </div>
 
         {/* Our Team Section */}
-        <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+        {/* <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Our Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
@@ -70,7 +70,7 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Section */}
         <div className="bg-primary-50 rounded-lg p-8 text-center">

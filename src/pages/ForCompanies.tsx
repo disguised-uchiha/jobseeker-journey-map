@@ -16,7 +16,7 @@ const ForCompanies = () => {
 
         {/* Hero Section */}
         <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="">
             <div>
               <h2 className="text-2xl font-semibold mb-4">Streamline Your Hiring Process</h2>
               <p className="text-gray-600 mb-6">
@@ -26,9 +26,9 @@ const ForCompanies = () => {
                 <Link to="/contact-us">Get Started</Link>
               </Button>
             </div>
-            <div className="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
+            {/* <div className="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
               <p className="text-gray-400 italic">Company image placeholder</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -112,7 +112,7 @@ const ForCompanies = () => {
         </div>
 
         {/* Pricing/Packages */}
-        <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+        {/* <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
           <h2 className="text-2xl font-semibold mb-6 text-center">Our Recruitment Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {["Standard", "Premium", "Enterprise"].map((tier, i) => (
@@ -143,7 +143,7 @@ const ForCompanies = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Section */}
         <div className="bg-primary text-white rounded-lg p-8 text-center">

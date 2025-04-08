@@ -89,9 +89,9 @@ const ContactUs = () => {
                     <h3 className="font-medium">Our Office</h3>
                   </div>
                   <p className="text-gray-600 pl-7">
-                    123 Business Avenue<br />
-                    Suite 456<br />
-                    New York, NY 10001
+                    HRStream Technologies,<br />
+                    411/1, 24th Main, HSR Layout,<br />
+                    Sector-2, Bangalore,Karnataka 560102
                   </p>
                 </div>
                 
@@ -101,7 +101,7 @@ const ContactUs = () => {
                     <h3 className="font-medium">Phone</h3>
                   </div>
                   <p className="text-gray-600 pl-7">
-                    +1 (555) 123-4567
+                  +91 991 605 5590
                   </p>
                 </div>
                 

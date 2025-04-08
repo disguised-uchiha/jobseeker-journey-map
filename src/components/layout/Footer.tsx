@@ -12,54 +12,40 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Logo variant="light" />
-            <p className="text-gray-400 mt-4 text-sm">
-              We are recruitment agency that help you
-              find more talents to develop business
-            </p>
+            <p className="text-gray-400 mt-4 text-sm">We are recruitment agency that help you find more talents to develop business</p>
             <div className="flex items-center mt-6">
-              <Input
-                type="email"
-                placeholder="Enter email"
-                className="rounded-r-none bg-gray-800 border-gray-700 text-white"
-              />
-              <Button
-                type="submit"
-                size="icon"
-                className="rounded-l-none bg-gray-800 border border-gray-700 hover:bg-gray-700"
-              >
+              <Input type="email" placeholder="Enter email" className="rounded-r-none bg-gray-800 border-gray-700 text-white" />
+              <Button type="submit" size="icon" className="rounded-l-none bg-gray-800 border border-gray-700 hover:bg-gray-700">
                 <Send className="h-4 w-4" />
               </Button>
             </div>
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/hrstream-technologies-private-limited"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-colors"
-              >
+                className="bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-colors"
-              >
+                className="bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-colors"
-              >
+                className="bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-colors">
                 <Facebook className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">/Core</h3>
+            <h3 className="text-lg font-semibold mb-4">Core</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/jobs" className="text-gray-400 hover:text-white transition-colors">
@@ -81,11 +67,11 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/blogs" className="text-gray-400 hover:text-white transition-colors">
                   Blogs
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -94,20 +80,16 @@ const Footer = () => {
             <address className="not-italic text-gray-400">
               <div className="flex items-start mb-2">
                 <MapPin className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                <p>
-                  Flat No. 204, "Shanti Nilaya" Apartments, 12th Cross, Model Colony, Indiranagar, Bengaluru - 560038
-                </p>
+                <p>HRStream Technologies, 411/1, 24th Main, HSR Layout, Sector-2, Bangalore,Karnataka 560102</p>
               </div>
             </address>
           </div>
         </div>
       </div>
-      
+
       <div className="border-t border-gray-800">
         <div className="hr-container py-6">
-          <p className="text-gray-400 text-sm text-center">
-            Copyright © {new Date().getFullYear()} HR Stream. All right reserved.
-          </p>
+          <p className="text-gray-400 text-sm text-center">Copyright © {new Date().getFullYear()} HR Stream. All right reserved.</p>
         </div>
       </div>
     </footer>
@@ -115,3 +97,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

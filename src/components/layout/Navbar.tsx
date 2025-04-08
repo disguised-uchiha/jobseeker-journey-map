@@ -34,14 +34,14 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-300 border-b border-gray-200 ${
         isScrolled
           ? "bg-white shadow-md py-3"
           : "bg-transparent py-5"
       }`}
     >
       <div className="hr-container flex items-center justify-between">
-        <Logo variant={isScrolled ? "dark" : "dark"} />
+        <Logo variant="dark" />
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -86,18 +86,6 @@ const Navbar = () => {
             Contact Us
           </Link>
         </nav>
-
-        <div className="hidden md:block">
-          <Button
-            className="bg-gray-900 hover:bg-black text-white rounded-full px-6 py-2 flex items-center gap-2"
-            asChild
-          >
-            <a href="mailto:info@hrstreams.com">
-              Login/Register
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </Button>
-        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -159,15 +147,6 @@ const Navbar = () => {
                 Contact Us
               </Link>
             </nav>
-            <Button
-              className="w-full bg-gray-900 hover:bg-black text-white rounded-full flex items-center justify-center gap-2"
-              asChild
-            >
-              <a href="mailto:info@hrstreams.com">
-                Login/Register
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </Button>
           </div>
         </div>
       )}
