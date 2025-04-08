@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,7 @@ interface SearchBarProps {
   redirectToJobs?: boolean;
   variant?: "primary" | "white";
   value?: string;
+  onChange?: (value: string) => void;
 }
 
 export const SearchBar = ({
@@ -23,10 +23,15 @@ export const SearchBar = ({
   redirectToJobs = true,
   variant = "white",
   value = "",
+  onChange,
 }: SearchBarProps) => {
   const [searchTerm, setSearchTerm] = useState(value);
   const navigate = useNavigate();
   const { setFilters } = useJob();
+
+  useEffect(() => {
+    setSearchTerm(value);
+  }, [value]);
 
   const handleSearch = () => {
     if (onSearch) {
@@ -45,13 +50,21 @@ export const SearchBar = ({
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    setSearchTerm(newValue);
+    if (onChange) {
+      onChange(newValue);
+    }
+  };
+
   return (
     <div className={`flex w-full max-w-xl ${className}`}>
       <div className="relative w-full">
         <input
           type="text"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           className={`w-full h-12 px-4 py-3 ${

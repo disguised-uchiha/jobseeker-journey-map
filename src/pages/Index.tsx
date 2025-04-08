@@ -9,16 +9,27 @@ import { useState } from "react";
 import { ChevronRight, ArrowRight } from "lucide-react";
 
 const Index = () => {
-  const { jobs } = useJob();
+  const { jobs, setFilters } = useJob();
   const featuredJobs = jobs.slice(0, 4);
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     // Add email subscription logic here
     setEmail("");
     setIsSubmitted(true);
+  };
+
+  const handleCategoryClick = (category: string) => {
+    setSearchInput(category);
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      search: category,
+    }));
+    // Trigger search logic
+    setFilters((prev) => ({ ...prev, search: category }));
   };
 
   return (
@@ -45,7 +56,7 @@ const Index = () => {
                 </Button>
               </div>
 
-              <section className="py-10 bg-white">
+              <section className="bg-white">
                 <div className="hr-container">
                   <h3 className="text-xl text-gray-700 mb-8 text-center"># Trusted by over 10K+ users</h3>
                   <div className="grid grid-cols-3 md:grid-cols-3 gap-4 text-center">
@@ -132,20 +143,20 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Search your dream job</h2>
           </div>
           <div className="flex justify-center mb-8">
-            <SearchBar className="w-full max-w-2xl" />
+            <SearchBar className="w-full max-w-2xl" value={searchInput} onChange={(value: string) => setSearchInput(value)} />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary">
+            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary" onClick={() => handleCategoryClick('Remote jobs')}>
               Remote jobs
             </Button>
-            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary">
+            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary" onClick={() => handleCategoryClick('Tech jobs')}>
               Tech jobs
             </Button>
-            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary">
+            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary" onClick={() => handleCategoryClick('Marketing')}>
               Marketing
             </Button>
-            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary">
+            <Button variant="outline" className="rounded-md border border-gray-200 hover:border-primary hover:text-primary" onClick={() => handleCategoryClick('Management')}>
               Management
             </Button>
           </div>

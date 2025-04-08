@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Calendar, DollarSign, ExternalLink } from "lucide-react";
+import { MapPin, Calendar, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Job } from "@/context/JobContext";
@@ -58,7 +58,6 @@ export const JobCard = ({ job }: JobCardProps) => {
                   <span>{`${job.experienceMin}-${job.experienceMax} Years`}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-500">
-                  <DollarSign className="mr-1 h-4 w-4" />
                   <span>{job.salary || 'Not Disclosed'}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-500">
