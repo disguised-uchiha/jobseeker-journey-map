@@ -9,7 +9,6 @@ import { Job } from "@/context/JobContext";
 interface JobCardProps {
   job: Job;
 }
-
 export const JobCard = ({ job }: JobCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   
