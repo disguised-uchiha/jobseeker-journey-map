@@ -54,7 +54,7 @@ export const SearchBar = ({
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className={`w-full px-4 py-3 ${
+          className={`w-full h-12 px-4 py-3 ${
             showButton ? "rounded-l-md" : "rounded-md"
           } border ${
             variant === "white" ? "bg-white" : "bg-gray-50"
@@ -73,7 +73,7 @@ export const SearchBar = ({
         <Button
           type="button"
           onClick={handleSearch}
-          className={`px-6 rounded-l-none h-auto ${
+          className={`h-12 px-6 rounded-l-none ${
             variant === "white" ? "bg-primary" : "bg-primary"
           } text-white hover:bg-primary-700 transition-all duration-200`}
         >

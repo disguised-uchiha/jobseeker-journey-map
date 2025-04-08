@@ -32,6 +32,7 @@ export const Logo = ({ variant = "dark" }: LogoProps) => {
         <span className={variant === "dark" ? "text-gray-900" : "text-white"}>HR</span>
         <span className="text-primary"> STREAM</span>
       </div>
+      <div className="text-xs text-gray-600 mt-1">TALENT ACQUISITION PARTNER</div>
     </Link>
   );
 };

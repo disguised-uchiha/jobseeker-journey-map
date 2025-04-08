@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/Logo";
 
@@ -89,10 +89,13 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Button
-            className="bg-gray-900 hover:bg-black text-white rounded-full"
+            className="bg-gray-900 hover:bg-black text-white rounded-full px-6 py-2 flex items-center gap-2"
             asChild
           >
-            <a href="mailto:info@hrstreams.com">Login/Register</a>
+            <a href="mailto:info@hrstreams.com">
+              Login/Register
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </Button>
         </div>
 
@@ -157,10 +160,13 @@ const Navbar = () => {
               </Link>
             </nav>
             <Button
-              className="w-full bg-gray-900 hover:bg-black text-white rounded-full"
+              className="w-full bg-gray-900 hover:bg-black text-white rounded-full flex items-center justify-center gap-2"
               asChild
             >
-              <a href="mailto:info@hrstreams.com">Login/Register</a>
+              <a href="mailto:info@hrstreams.com">
+                Login/Register
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </Button>
           </div>
         </div>

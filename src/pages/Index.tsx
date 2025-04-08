@@ -7,7 +7,7 @@ import { useJob } from "@/context/JobContext";
 import { SuccessMessage } from "@/components/ui/SuccessMessage";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
 const Index = () => {
   const { jobs } = useJob();
@@ -25,67 +25,83 @@ const Index = () => {
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-50 to-white">
+      <section className="bg-white">
         <div className="hr-container py-16 md:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Connecting Talent to Endless
-                <span className="text-primary block mt-2">Opportunities</span>
+                Connecting Talent to 
+                <span className="text-primary block mt-2">Endless Opportunities</span>
               </h1>
               <p className="text-gray-600 text-lg max-w-md">
-                We connect skilled talent with leading companies, ensuring perfect matches and successful partnerships.
+                Partner with an industry leader dedicated to bridging the gap between 
+                job seekers and top employers. Discover career-defining opportunities 
+                and take the next step toward success.
               </p>
               <div className="pt-4">
                 <Button 
-                  className="rounded-full px-8 py-6 bg-primary hover:bg-primary-600 text-white font-medium"
+                  className="rounded-full px-8 py-6 bg-primary hover:bg-primary-600 text-white font-medium flex items-center gap-2"
                   asChild
                 >
-                  <Link to="/jobs">Explore Jobs</Link>
+                  <Link to="/jobs">
+                    Explore jobs
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
                 </Button>
               </div>
             </div>
             <div className="relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="bg-blue-400 rounded-3xl overflow-hidden">
-                <img 
-                  src="/lovable-uploads/66774b9f-3b0b-4fb7-bee3-28ebde32aa3d.png" 
-                  alt="Professional at work" 
-                  className="w-full h-full object-cover mix-blend-overlay"
-                />
-              </div>
-              <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-lg">
-                <img src="/public/lovable-uploads/2ae44931-471b-4e6a-9818-c5221074acd3.png" alt="Office icon" className="w-10 h-10" />
-              </div>
-              <div className="absolute top-1/2 -left-6 bg-white p-3 rounded-xl shadow-lg">
-                <img src="/public/lovable-uploads/386e0039-24b8-4fa3-bc7b-fa5af41d41e5.png" alt="Code icon" className="w-10 h-10" />
-              </div>
-              <div className="absolute -bottom-4 right-1/4 bg-white p-3 rounded-xl shadow-lg">
-                <img src="/public/lovable-uploads/82fd6f8c-0d3e-439c-975e-0750f6389259.png" alt="User icon" className="w-10 h-10" />
+              <div className="relative">
+                <div className="bg-blue-400 rounded-full overflow-hidden h-[400px] w-[400px] mx-auto">
+                  <img 
+                    src="/lovable-uploads/f148d233-a703-48cf-a9c9-833359974bc3.png" 
+                    alt="Professional at work" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="absolute top-0 right-0 transform translate-x-16 translate-y-36">
+                  <div className="bg-white p-3 rounded-xl shadow-lg flex flex-col items-center justify-center w-32 h-32">
+                    <img src="/lovable-uploads/095b9d84-13c7-431a-851d-98ce527799e7.png" alt="Looking for jobs" className="w-12 h-12 mb-2" />
+                    <p className="text-center text-xs">I am looking for a job</p>
+                  </div>
+                </div>
+                
+                <div className="absolute top-1/2 -left-10 transform -translate-y-1/2">
+                  <div className="bg-white p-3 rounded-xl shadow-lg flex flex-col items-center justify-center w-32 h-32">
+                    <img src="/lovable-uploads/7a91bf38-e78f-47da-96f0-a71f2e679714.png" alt="We are hiring" className="w-12 h-12 mb-2" />
+                    <p className="text-center text-xs">We are hiring</p>
+                  </div>
+                </div>
+                
+                <div className="absolute bottom-0 right-1/3 transform translate-y-16">
+                  <div className="bg-white p-3 rounded-xl shadow-lg flex flex-col items-center justify-center w-32 h-32">
+                    <img src="/lovable-uploads/e4d35fb9-1746-420b-8a69-e2c29e3a61f9.png" alt="Job opportunities" className="w-12 h-12 mb-2" />
+                    <p className="text-center text-xs">Job Opportunities</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Stats Section */}
+      {/* Trusted Section */}
       <section className="py-10 bg-white">
         <div className="hr-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <h3 className="text-xl text-gray-700 mb-8 text-center"># Trusted by over 10K+ users</h3>
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-4 text-center">
             <div className="p-4">
+              <p className="text-3xl font-bold text-primary">10+</p>
+              <p className="text-gray-500 text-sm">Wide range of industries</p>
+            </div>
+            <div className="p-4">
+              <p className="text-3xl font-bold text-gray-900">12K+</p>
+              <p className="text-gray-500 text-sm">Employed</p>
+            </div>
+            <div className="p-4">
+              <p className="text-3xl font-bold text-yellow-500">1500+</p>
               <p className="text-gray-500 text-sm">Jobs Posted</p>
-              <p className="text-3xl font-bold text-gray-900">50+</p>
-            </div>
-            <div className="p-4">
-              <p className="text-gray-500 text-sm">Talent Matches</p>
-              <p className="text-3xl font-bold text-gray-900">100+</p>
-            </div>
-            <div className="p-4">
-              <p className="text-gray-500 text-sm">Happy Clients</p>
-              <p className="text-3xl font-bold text-gray-900">25+</p>
-            </div>
-            <div className="p-4">
-              <p className="text-gray-500 text-sm">Global Reach</p>
-              <p className="text-3xl font-bold text-gray-900">10+</p>
             </div>
           </div>
         </div>
@@ -215,11 +231,11 @@ const Index = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="rounded-r-none text-gray-800"
+                      className="rounded-r-none text-gray-800 h-12"
                     />
                     <Button 
                       type="submit"
-                      className="rounded-l-none px-4 bg-primary hover:bg-primary-600"
+                      className="rounded-l-none h-12 px-4 bg-primary hover:bg-primary-600"
                     >
                       <ChevronRight className="h-5 w-5" />
                     </Button>
