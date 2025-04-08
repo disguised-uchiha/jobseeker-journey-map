@@ -78,7 +78,7 @@ const Index = () => {
             </div>
             <div className="hidden md:flex animate-fade-in h-full gap-16" style={{ animationDelay: "0.2s" }}>
               <div className="flex flex-1 flex-col gap-4 items-center justify-start">
-                <img src="/hp-1.png" alt="Hero Image" className="w-44 h-fit object-cover" />
+                <img src="./hp-1.png" alt="Hero Image" className="w-44 h-fit object-cover" />
                 <div className="border-l border-gray-200 h-6"></div>
                 <div className="relative w-32 h-32 flex flex-col items-center justify-center">
                   <div
@@ -87,7 +87,7 @@ const Index = () => {
                       clipPath: "polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%)",
                       borderRadius: "8px"
                     }}></div>
-                  <img src="/job.svg" alt="Job opportunities" className="w-8 h-8 relative z-10 mb-1" />
+                  <img src="./job.svg" alt="Job opportunities" className="w-8 h-8 relative z-10 mb-1" />
                   <p className="text-xs text-center font-medium relative z-10 mt-1">
                     Job <br />
                     opportunities
@@ -96,7 +96,7 @@ const Index = () => {
               </div>
 
               <div className="flex flex-1 flex-col-reverse gap-4 items-center justify-start">
-                <img src="/hp-2.png" alt="Hero Image" className="w-44 h-fit" />
+                <img src="./hp-2.png" alt="Hero Image" className="w-44 h-fit" />
                 <div className="border-l border-gray-200 h-6"></div>
                 <div className="relative w-32 h-32 flex flex-col items-center justify-center">
                   <div
@@ -105,7 +105,7 @@ const Index = () => {
                       clipPath: "polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%)",
                       borderRadius: "8px"
                     }}></div>
-                  <img src="/search.svg" alt="Job opportunities" className="w-8 h-8 relative z-10 mb-1" />
+                  <img src="./search.svg" alt="Job opportunities" className="w-8 h-8 relative z-10 mb-1" />
                   <p className="text-xs text-center font-medium relative z-10 mt-1">
                     We are <br />
                     hiring
@@ -114,7 +114,7 @@ const Index = () => {
               </div>
 
               <div className="flex flex-1 flex-col gap-4 items-center justify-start">
-                <img src="/hp-3.png" alt="Hero Image" className="w-44 h-fit object-cover" />
+                <img src="./hp-3.png" alt="Hero Image" className="w-44 h-fit object-cover" />
                 <div className="border-l border-gray-200 h-6"></div>
                 <div className="relative w-32 h-32 flex flex-col items-center justify-center">
                   <div
@@ -123,7 +123,7 @@ const Index = () => {
                       clipPath: "polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%)",
                       borderRadius: "8px"
                     }}></div>
-                  <img src="/hand.svg" alt="Job opportunities" className="w-8 h-8 relative z-10 mb-1" />
+                  <img src="./hand.svg" alt="Job opportunities" className="w-8 h-8 relative z-10 mb-1" />
                   <p className="text-xs text-center font-medium relative z-10 mt-1">
                     I am looking
                     <br />
