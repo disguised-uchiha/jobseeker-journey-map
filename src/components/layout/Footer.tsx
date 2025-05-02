@@ -80,7 +80,8 @@ const Footer = () => {
             <address className="not-italic text-gray-400">
               <div className="flex items-start mb-2">
                 <MapPin className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                <p>HRStream Technologies, 411/1, 24th Main, HSR Layout, Sector-2, Bangalore,Karnataka 560102</p>
+                #1728, 19th main, 27th cross, HSR layout, sector-2, <br/>
+                Bengaluru, Karanataka, PIN- 560102
               </div>
             </address>
           </div>

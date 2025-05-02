@@ -89,9 +89,8 @@ const ContactUs = () => {
                     <h3 className="font-medium">Our Office</h3>
                   </div>
                   <p className="text-gray-600 pl-7">
-                    HRStream Technologies,<br />
-                    411/1, 24th Main, HSR Layout,<br />
-                    Sector-2, Bangalore,Karnataka 560102
+                    #1728, 19th main, 27th cross, HSR layout, sector-2, <br/>
+                    Bengaluru, Karanataka, PIN- 560102
                   </p>
                 </div>
                 
